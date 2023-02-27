@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Desafio1_DSM">
         <activity
+            android:name=".FichaActivity"
+            android:exported="true" />
+        <activity
             android:name=".Ejercicio2Activity"
             android:exported="true" />
         <activity

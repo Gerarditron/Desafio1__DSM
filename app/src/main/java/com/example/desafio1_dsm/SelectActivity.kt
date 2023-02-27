@@ -22,8 +22,8 @@ class SelectActivity : AppCompatActivity() {
         //Abrimos la actividad correspondiente a cada boton
         //Ejercicio 1
         btnEjercicio1.setOnClickListener{
-            val intentE1 = Intent(this,Ejercicio1Activity::class.java)
-            startActivity(intentE1)
+            val intent1 = Intent(this, Ejercicio1Activity::class.java)
+            startActivity(intent1)
         }
 
         //Ejercicio 2
