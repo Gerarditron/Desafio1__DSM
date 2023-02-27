@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Desafio1_DSM</string>
     <string name="usuario">Usuario:</string>
+    <string name="select">Elegir Mes</string>
 </resources>

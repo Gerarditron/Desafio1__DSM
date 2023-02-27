@@ -54,20 +54,20 @@ class Ejercicio2Activity : AppCompatActivity() {
             Log.d("NUMEROS",b.toString())
             Log.d("NUMEROS",c.toString())
 
-            if (a == null)  {
-                a = 0.0
-             } else if (b == null)  {
-                b = 0.0
-            } else if (c == null)  {
-                c = 0.0
+            when {
+                a == null -> {
+                    a = 0.0
+                }
+                b == null -> {
+                    b = 0.0
+                }
+                c == null -> {
+                    c = 0.0
+                }
             }
 
             // Validamos que todos los valores estan digitados
             if (a != 0.0 || b != 0.0 || c != 0.0 ) {
-
-                Log.d("NUMEROS",a.toString())
-                Log.d("NUMEROS",b.toString())
-                Log.d("NUMEROS",c.toString())
 
                 //Calculamos la ecuacion cuadratica
                 var x1 : Double = (-b+sqrt(b.pow(2) -4*a*c))/(2*a)

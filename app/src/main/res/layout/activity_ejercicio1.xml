@@ -3,8 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="30dp"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="5dp"
     android:orientation="vertical"
     tools:context=".Ejercicio1Activity">
 
@@ -21,7 +23,7 @@
     <LinearLayout
         android:id="@+id/lytForm"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
@@ -31,12 +33,42 @@
             android:layout_marginBottom="10dp"
             android:text="Informacion del Vendedor"
             android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20sp"
             android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/lytCod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lbCod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cod. Empleado:"
+                android:textAlignment="textEnd"
+                android:textColor="#575757"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtCod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="50dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/lytNombre"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
@@ -45,27 +77,169 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Nombre:"
-                android:textAlignment="textEnd" />
+                android:textAlignment="textEnd"
+                android:textColor="#575757"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/txtNombre"
-                android:layout_width="328dp"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:height="48dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                tools:ignore="TouchTargetSizeCheck" />
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytApellido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lbApellido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Apellido:"
+                android:textAlignment="textEnd"
+                android:textColor="#575757"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtApellido"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="50dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnRegresarE1"
-        android:layout_width="227dp"
+    <LinearLayout
+        android:id="@+id/lytVentas"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="40dp"
-        android:backgroundTint="#F44336"
-        android:text="Regresar" />
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:id="@+id/lytTitulos"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lbVenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Valor de Venta:"
+                android:textAlignment="center"
+                android:textColor="#575757"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtVenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:minHeight="48dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytCobros"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lbCantidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cantidad Vendida:"
+                android:textAlignment="center"
+                android:textColor="#575757"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtCantidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:minHeight="48dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lytMes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/lbMes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Mes:"
+            android:textAlignment="textEnd"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/lstSpinner"
+            android:layout_width="348dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="48dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lytBotones"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnCrearFicha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:height="50dp"
+            android:backgroundTint="#2196F3"
+            android:text="Crear Ficha"
+            android:textColor="#050505" />
+
+        <Button
+            android:id="@+id/btnRegresarE1"
+            android:layout_width="227dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#F44336"
+            android:text="Regresar" />
+    </LinearLayout>
 
 </LinearLayout>
